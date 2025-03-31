@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module PESEL</title>
+</head><body>
 
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">PESEL</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Ckuba%5Cdesktop%5Cdokumenty%5Cpesel.py">c:\users\kuba\desktop\dokumenty\pesel.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-check_digit"><strong>check_digit</strong></a>(value)</dt><dd><span class="code">Purpose:&nbsp;Ensures&nbsp;that&nbsp;the&nbsp;PESEL&nbsp;consists&nbsp;of&nbsp;only&nbsp;digits.<br>
+&nbsp;<br>
+Parameters:<br>
+value&nbsp;(str):&nbsp;PESEL&nbsp;value<br>
+&nbsp;<br>
+Returns:<br>
+boolean:&nbsp;`True`&nbsp;if&nbsp;valid,&nbsp;`False`&nbsp;otherwise.<br>
+Errors&nbsp;Tracked:&nbsp;`invalid_digit`</span></dd></dl>
+ <dl><dt><a name="-check_length"><strong>check_length</strong></a>(value)</dt><dd><span class="code">Purpose:&nbsp;Checks&nbsp;if&nbsp;the&nbsp;PESEL&nbsp;number&nbsp;is&nbsp;exactly&nbsp;**11&nbsp;characters&nbsp;long**.<br>
+&nbsp;<br>
+Parameters:<br>
+value&nbsp;(str):&nbsp;PESEL&nbsp;value<br>
+&nbsp;<br>
+Returns:<br>
+boolean:&nbsp;`True`&nbsp;if&nbsp;valid,&nbsp;`False`&nbsp;otherwise.<br>
+Errors&nbsp;Tracked:&nbsp;`invalid_length`</span></dd></dl>
+ <dl><dt><a name="-check_month"><strong>check_month</strong></a>(value)</dt><dd><span class="code">Purpose:&nbsp;Validates&nbsp;the&nbsp;birth&nbsp;date&nbsp;encoded&nbsp;in&nbsp;the&nbsp;PESEL.<br>
+Checks&nbsp;month&nbsp;&amp;&nbsp;day&nbsp;validity.<br>
+Adjusts&nbsp;for&nbsp;different&nbsp;centuries&nbsp;(1800–2299).<br>
+&nbsp;<br>
+Parameters:<br>
+value&nbsp;(str):&nbsp;PESEL&nbsp;value<br>
+&nbsp;<br>
+Returns:<br>
+boolean:&nbsp;`True`&nbsp;if&nbsp;valid,&nbsp;`False`&nbsp;otherwise.<br>
+Errors&nbsp;Tracked:&nbsp;`invalid_date`</span></dd></dl>
+ <dl><dt><a name="-checksum"><strong>checksum</strong></a>(value)</dt><dd><span class="code">Purpose:&nbsp;Verifies&nbsp;the&nbsp;PESEL&nbsp;`checksum`&nbsp;using&nbsp;predefined&nbsp;weights.<br>
+If&nbsp;valid,&nbsp;updates&nbsp;gender&nbsp;statistics&nbsp;(`male`&nbsp;/&nbsp;`female`).<br>
+&nbsp;<br>
+Parameters:<br>
+value&nbsp;(str):&nbsp;PESEL&nbsp;value<br>
+&nbsp;<br>
+Returns:<br>
+boolean:&nbsp;`True`&nbsp;if&nbsp;valid,&nbsp;`False`&nbsp;otherwise.<br>
+Errors&nbsp;Tracked:&nbsp;`invalid_checksum`</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>PESEL_LENGTH</strong> = 11<br>
+<strong>PESEL_WEIGHT</strong> = (1, 3, 7, 9, 1, 3, 7, 9, 1, 3)<br>
+<strong>correct</strong> = 906665<br>
+<strong>female</strong> = 452689<br>
+<strong>file</strong> = &lt;_io.TextIOWrapper name='1e6.dat' mode='r' encoding='cp1250'&gt;<br>
+<strong>invalid_checksum</strong> = 43121<br>
+<strong>invalid_date</strong> = 40793<br>
+<strong>invalid_digit</strong> = 4374<br>
+<strong>invalid_length</strong> = 5047<br>
+<strong>male</strong> = 453976<br>
+<strong>pesel</strong> = '46840895042'<br>
+<strong>total</strong> = 1000000</td></tr></table>
+</body></html>
